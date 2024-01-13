@@ -52,3 +52,5 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
         require(sent, "Failed to send Ether");
     }
 }
+
+// NFT Contract Address: 0xb067cD84fA055197C5e164De789D92A02a515F21
