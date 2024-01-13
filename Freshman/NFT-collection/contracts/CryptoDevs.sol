@@ -1,12 +1,12 @@
 // SPDX-License-Identefier : MIT
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
-pragma solidity 0.8.16;
+pragma solidity 0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./Whitelist.sol";
 
-contract CryptoDevs is ERC721Enumerable, Ownable {
+abstract contract CryptoDevs is ERC721Enumerable, Ownable {
     uint256 public constant _price = 0.0001 ether;
 
     uint256 public constant maxTokenIds = 20;
@@ -37,7 +37,7 @@ contract CryptoDevs is ERC721Enumerable, Ownable {
         }
 
         uint256 tokenId = totalSupply();
-        _safeMint(msg.sender, tokenId());
+        _safeMint(msg.sender, tokenId);
     }
 
     function withdraw() public onlyOwner {
