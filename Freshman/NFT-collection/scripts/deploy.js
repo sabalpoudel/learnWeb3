@@ -27,4 +27,4 @@ main()
     process.exit(1);
   });
 
-// WhiteList contract address: 0x93D2AD9b8B900755F5737522D9E11A96761510cD
+// WhiteList contract address: 0x7D115d3416bb3B4bf4F410281D40754F91D18279
