@@ -16,7 +16,7 @@ async function main() {
 
   await hre.run("verify:verify", {
     address: wLContract.target,
-    constructorArgument: [10],
+    constructorArguments: [10],
   });
 }
 
@@ -26,3 +26,5 @@ main()
     console.error(err);
     process.exit(1);
   });
+
+// WhiteList contract address: 0x93D2AD9b8B900755F5737522D9E11A96761510cD
