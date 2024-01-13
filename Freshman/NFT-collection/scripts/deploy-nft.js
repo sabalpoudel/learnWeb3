@@ -1,24 +1,37 @@
 const hre = require("hardhat");
 
-const wLContractAddress = "0x7D115d3416bb3B4bf4F410281D40754F91D18279";
+const contractAddress = "0x7D115d3416bb3B4bf4F410281D40754F91D18279";
 
 async function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function main() {
+  // Deploy the CryptoDevs Contract
   const nftContract = await hre.ethers.deployContract("CryptoDevs", [
-    wLContractAddress,
+    contractAddress,
   ]);
 
+  // wait for the contract to deploy
   await nftContract.waitForDeployment();
+
+  // print the address of the deployed contract
   console.log("NFT Contract Address:", nftContract.target);
 
-  await sleep(30 * 1000);
+  // Sleep for 30 seconds while Etherscan indexes the new contract deployment
+  await sleep(30 * 1000); // 30s = 30 * 1000 milliseconds
 
   // Verify the contract on etherscan
   await hre.run("verify:verify", {
     address: nftContract.target,
-    constructorArguments: [wLContractAddress],
+    constructorArguments: [contractAddress],
   });
 }
+
+// Call the main function and catch if there is any error
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

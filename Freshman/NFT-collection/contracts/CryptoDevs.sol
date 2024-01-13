@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "./Whitelist.sol";
 
 contract CryptoDevs is ERC721Enumerable, Ownable {
-    uint256 public constant _price = 0.001 ether; //  _price is the price of one Crypto Dev NFT
+    uint256 public constant _price = 0.0001 ether; //  _price is the price of one Crypto Dev NFT
     uint256 public constant maxTokenIds = 20; // Max number of CryptoDevs that can ever exist
     WhiteList whitelist; // Whitelist contract instance
 
