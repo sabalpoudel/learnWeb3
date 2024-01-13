@@ -5,7 +5,7 @@ async function sleep(ms) {
 }
 
 async function main() {
-  const wLContract = await hre.ethers.deployContract("Whitelist", [10]);
+  const wLContract = await hre.ethers.deployContract("WhiteList", [10]);
 
   await wLContract.waitForDeployment();
 
