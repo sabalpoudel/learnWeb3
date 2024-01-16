@@ -48,6 +48,11 @@ const wagmiConfig = createConfig({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>CryptoDevs DAO</title>
+        <meta name="description" content="CryptoDevs DAO" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <WagmiConfig config={wagmiConfig}>
           <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
