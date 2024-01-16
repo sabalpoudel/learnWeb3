@@ -61,3 +61,16 @@ main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+
+// CryptoDevsNFT deployed to: 0xD2174a32966F9985be3d40b5e238b70a4e484a6C
+// FakeNFTMarketplace deployed to: 0xA9F4C79B6E50F5E718aF484b54a686860e8eb4f6
+// CryptoDevsDAO deployed to: 0x7b252DBD73D5e67651b439ad451F65E69Dc04fA1
+
+// Successfully verified contract CryptoDevsNFT on the block explorer.
+// https://sepolia.etherscan.io/address/0xD2174a32966F9985be3d40b5e238b70a4e484a6C#code
+
+// Successfully verified contract FakeNFTMarketplace on the block explorer.
+// https://sepolia.etherscan.io/address/0xA9F4C79B6E50F5E718aF484b54a686860e8eb4f6#code
+
+// Successfully verified contract CryptoDevsDAO on the block explorer.
+// https://sepolia.etherscan.io/address/0x7b252DBD73D5e67651b439ad451F65E69Dc04fA1#code
