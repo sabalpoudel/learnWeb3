@@ -21,11 +21,12 @@ async function main() {
   );
 
   // Deploy the DAO Contract
-  const amount = hre.ethers.parseEther("1"); // You can change this value from 1 ETH to something else
-  const daoContract = await hre.ethers.deployContract("CryptoDevsDAO", [
-    fakeNftMarketplaceContract.target,
-    nftContract.target,
-  ], {value: amount,});
+  const amount = hre.ethers.parseEther("0.01"); // You can change this value from 1 ETH to something else
+  const daoContract = await hre.ethers.deployContract(
+    "CryptoDevsDAO",
+    [fakeNftMarketplaceContract.target, nftContract.target],
+    { value: amount }
+  );
   await daoContract.waitForDeployment();
   console.log("CryptoDevsDAO deployed to:", daoContract.target);
 
